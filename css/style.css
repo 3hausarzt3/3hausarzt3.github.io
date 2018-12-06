@@ -1,0 +1,1870 @@
+/*	################################################################
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+################################################################# */
+/* STYLE */
+@import url(font-awesome.css) screen;
+@import url(bootstrap.css) screen;
+@import url(owl.carousel.css) screen;
+@import url(pe-icon-7-stroke.css) screen;
+@import url(animate.min.css) screen;
+/* FONTS */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,600italic,700,800,400italic);
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+/* ======================
+1. GENERAL SECTION
+====================== */
+* {
+margin: 0;
+padding: 0px;
+}
+body {
+font-family: 'Montserrat', sans-serif;
+font-size: 13px;
+line-height: 20px;
+position: relative;
+background: #fff;
+padding: 0;
+margin: 0;
+overflow: visible;
+-webkit-font-smoothing: subpixel-antialiased !important; /* 4 позиции внизу -  Сглаживание шрифтов */
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility:    hidden;
+-ms-backface-visibility:     hidden;
+}
+
+/*
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+*/
+a,a:focus,a:hover,a:active,button,/*УБИРАЕМ ПУНКТИРНУЮ ЛИНИЮ ВОКРУГ КНОПОК BOOTSTRAP */
+button:hover { outline: 0 !important;}
+a:focus {text-decoration: none;} 	
+.hidden {
+display: none;
+}
+.alignleft {
+float: left;
+}
+.alignright {
+float: right;
+}
+.aligncenter {
+margin-left: auto;
+margin-right: auto;
+display: block;
+clear: both;
+}
+.clear {
+clear: both;
+display: block;
+font-size: 0;
+height: 0;
+line-height: 0;
+width: 100%;
+}
+::-moz-selection {
+color: #555252;
+text-shadow: none;
+background: #2B2E31;
+}
+::-webkit-input-placeholder {
+color: #555252 !important;
+}
+:-moz-placeholder {
+/* Firefox 18- */
+color: #555252 !important;
+}
+::-moz-placeholder  {
+/* Firefox 19+ */
+color: #555252 !important;
+}
+:-ms-input-placeholder {
+color: #555252 !important;
+}
+.contact-form .form-control::-webkit-input-placeholder{ /*  ТЕКСТ ПРИГЛАШЕНИЯ К РАБОТЕ В КОНТАКТНОЙ ФОРМЕ */
+color: #6d8e91 !important;
+font-weight: 100;
+}
+.contact-form .form-control::-moz-placeholder{/*  ТЕКСТ ПРИГЛАШЕНИЯ К РАБОТЕ В КОНТАКТНОЙ ФОРМЕ */
+color: #6d8e91 !important;
+font-weight: 100;
+}
+.contact-form .form-control:-moz-placeholder{/*  ТЕКСТ ПРИГЛАШЕНИЯ К РАБОТЕ В КОНТАКТНОЙ ФОРМЕ */
+color: #6d8e91 !important;
+font-weight: 100;
+}
+.contact-form .form-control:-ms-input-placeholder{/*  ТЕКСТ ПРИГЛАШЕНИЯ К РАБОТЕ В КОНТАКТНОЙ ФОРМЕ */
+color: #6d8e91 !important;
+font-weight: 100;
+}
+*,*:after,*:before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+a {
+color: #0098d7;
+padding: 0;
+margin: 0;
+text-decoration: none;
+}
+a:hover,a:focus {
+text-decoration: none;
+color: #01090C;
+}
+a img {
+border: none;
+vertical-align: bottom;
+}
+a.remove {
+display: block;
+height: 18px;
+width: 18px;
+margin: 10px;
+padding-left: 0 !important;
+text-indent: -9999px;
+background: url(images/remove.png) #01090C;
+border-radius: 100px;
+border-style: solid;
+border-width: 1px
+}
+h1,h2,h3,h4,h5,h6 {
+letter-spacing: 0px;
+font-weight: normal;
+position: relative;
+padding: 0 0 10px 0;
+font-weight: normal;
+font-family: 'Montserrat', sans-serif;
+line-height: 140%;
+color: #6d8e91;
+}
+h1 {
+font-size: 22px;
+}
+h2 {
+font-size: 20px;
+}
+h3 {
+font-size: 18px;
+}
+h4 {
+font-size: 16px;
+}
+h5 {
+font-size: 14px;
+}
+h6 {
+font-size: 13px;
+}
+.lead {
+font-family: 'Montserrat', sans-serif; !important;
+font-size: 18px;
+margin: 15px 0;
+padding: 0;
+}
+.first {
+clear: both
+}
+.last {
+margin-right: 0
+}
+audio,
+video {
+max-width: 100%;
+height: auto;
+}
+iframe,embed,object {
+max-width: 100%;
+}
+input,textarea {
+color: #000 !important
+}
+html, body, .wrapper{
+height: 100%;
+}
+.titie-section{ /* СЕКЦИЯ ДЛЯ ВСЕХ ЗАГЛАВИЙ */
+margin-bottom: 30px;
+display: block;
+position: relative;
+}
+.titie-section h1{
+margin: 0;
+padding: 0;
+display: block;
+text-align: center;
+font-size: 48px;
+color: #6d8e91;
+font-weight: 900;
+text-transform: uppercase;
+}
+.titie-section h1:before{
+content: "";
+width: 0px;/* ТОЛСТОЕ ПОДЧЕРКИВАНИЕ */
+display: block;
+height: 0px;
+background:#9d7a41;
+position: absolute;
+bottom: -16px;
+margin: 0 auto;
+left: 0;
+right: 0;
+}
+.titie-section h1:after{
+content: "";
+width:0px;/* ТОЛСТОЕ ПОДЧЕРКИВАНИЕ */
+display: block;
+height: 0px;
+background:#ed3800;
+position: absolute;
+bottom: -30px;
+margin: 0 auto;
+left: 0;
+right: 0;
+}
+.titie-section:after{
+content: "";
+width: 0px/* ТОЛСТОЕ ПОДЧЕРКИВАНИЕ */
+display: block;
+height: 0px;
+background:#9d7a41;
+position: absolute;
+bottom: -25px;
+margin: 0 auto;
+left: 0;
+right: 0;
+}
+.titie-section.white h1:before{
+content: "";
+width: 0px;/* ТОЛСТОЕ ПОДЧЕРКИВАНИЕ */
+display: block;
+height: 0px;
+background:#fff;
+position: absolute;
+bottom: -16px;
+margin: 0 auto;
+left: 0;
+right: 0;
+}
+.titie-section.white h1:after{
+content: "";
+width: 0px;/* ТОЛСТОЕ ПОДЧЕРКИВАНИЕ */
+display: block;
+height: 3px;
+background:#fff;
+position: absolute;
+bottom: -30px;
+margin: 0 auto;
+left: 0;
+right: 0;
+}
+.titie-section.white:after{
+content: "";
+width: 0px;/* ТОЛСТОЕ ПОДЧЕРКИВАНИЕ */
+display: block;
+height: 0px;
+background:#fff;
+position: absolute;
+bottom: -25px;
+margin: 0 auto;
+left: 0;
+right: 0;
+}
+.white-title{
+}
+.navbar-header {
+border: 0px solid red;
+font-family: 'Montserrat' !important;
+}
+.navbar-header img{ /*УПРАВЛЕНИЕ ЛОГОТИПОМ  */
+padding-top: 0px;
+}
+/*
+HEADER TOP SECTION
+*/
+.header-top-section{/* САМАЯ ВЕРХНЯЯ СЕКЦИЯ  */
+display: block;
+width: 100%;
+background:#6d8e91;/* ЦВЕТ САМОЙ ВЕРХНЕЙ СЕКЦИИ  */
+color:#ffffff;
+}
+.header-top-content{}
+.header-top-content ul{}
+.header-top-content ul li{}
+.header-top-content ul li a{
+color: #ffffff;
+font-size: 18px;
+font-weight: 300;
+padding-left: 0;
+}
+.header-top-content ul li a:hover, .header-top-content ul li a:active, .header-top-content ul li a:focus{
+background: transparent;
+color: #fff;
+}
+.header-top-content ul li:last-child a i{
+/*font-size: 20px;  */
+position: relative;
+top: 2px;
+}
+.header-top-menu{}
+.header-top-menu ul{}
+.header-top-menu ul li{}
+.header-top-menu ul li a{
+color: ;
+font-size: 14px;
+font-weight: 300;
+}
+.header-top-menu ul li a:hover, .header-top-menu ul li a:active, .header-top-menu ul li a:focus{
+background: transparent
+}
+.header-top-menu ul li a i{
+}
+/*
+HEADER SECTION
+*/
+.navbar-toggle { /* УПРАВЛЕНИЕ ВИДОМ КНОПКИ СВЕРНУТОГО МЕНЮ */
+position: relative;
+float: right;
+padding: 9px 10px;
+margin-top: 8px;
+margin-right: 15px;
+margin-bottom: 8px;
+background-color: #6d8e91;
+background-image: none;
+border: 1px solid #F6F6F6;
+border-radius: 0px;
+} 
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+background-color: #628082; /* ЦВЕТ АКТИВИРОВАННОГО СВЕРНУТОГО МЕНЮ */
+}
+.navbar-default .navbar-toggle .icon-bar {
+background-color: #ffffff; /* ЦВЕТ ПОЛОСОК СВЕРНУТОГО МЕНЮ */
+}
+.header-section{ /* МЕНЮ  ДО ПРОКРУТКИ */
+display: block;
+width: 100%;
+padding: 20px 0;
+position: relative;
+transition: all 1s;
+background:#ffffff; 
+border-bottom: 1px solid #6d8e91;
+}
+header.header-section.fixed { /* МЕНЮ ПОСЛЕ ПРОКРУТКИ */
+position: fixed;
+display: block;
+width: 100%;
+top: 0;
+background: #fffffff;
+z-index: 99999;
+border-bottom: 1px solid #6d8e91;
+padding: 10px 0;
+transition: all 1s;
+}
+.header-section .navbar{
+height: auto;
+min-height: none;
+margin-bottom: 0;
+border-radius: 0;
+border: none;
+background: transparent !important
+}
+.header-section .navbar .navbar-brand{
+font-size: 30px;
+font-weight: 300;
+text-transform: uppercase;
+color: #555252;
+}
+.header-section .navbar .navbar-brand b{ /* ПЕРВЫЕ  БУКВЫ В ИМЕНИ В МЕНЮ */
+color: #76644b;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{/*  БЛОК, НА КОТОРОМ УСТАНОВЛЕНО МЕНЮ И ЛОГОТИП */
+text-align: center;
+padding: 0 !important;
+background: transparent !important;
+}
+ul.navbar-nav{/*  БЛОК, НА КОТОРОМ УСТАНОВЛЕНО ТОЛЬКО МЕНЮ */
+background: transparent;
+margin: 0 auto;
+margin-bottom: -5px;
+display: inline-block;
+float: none;
+}
+ul.navbar-nav li{} /*  БУКВЫ В МЕНЮ */
+ul.navbar-nav li a{
+font-size: 16px;
+font-weight: 500;
+color:#6d8e91!important;
+background: transparent !important;
+text-transform: uppercase;
+}
+ul.navbar-nav li.active a, ul.navbar-nav li a:hover{/*  БУКВЫ В МЕНЮ ПРИ НАВЕДЕНИИ МЫШКИ */
+color:  #ed3800 !important;
+font-weight: 900;
+}
+ul.navbar-nav.cart-menu li a{
+padding-right: 0;
+color: #0f0101;
+font-weight: 700;
+}
+ul.navbar-nav.cart-menu li a .fa-search{
+margin-top: 6px;
+display: block;
+}
+span.shoping-cart {
+border: 1px solid #0f0101;
+padding: 2px 7px 2px 6px;
+text-align: center;
+display: inline-block;
+position: relative;
+background: #fff;
+}
+span.shoping-cart:after{
+height: 90%;
+width: 80%;
+display: block;
+background: transparent;
+position: absolute;
+content: "";
+border: 1px solid #0f0101;
+border-radius: 50%;
+top: -47%;
+left: 0;
+right: 0;
+margin: 0 auto;
+z-index: -9999;
+}
+span.shoping-cart:hover:after{
+top: -50%;
+}
+span.shoping-cart:before{
+height: 100%;
+width: 100%;
+display: block;
+background: #fff;
+position: absolute;
+content: "";
+top: 0%;
+left: 0;
+right: 0;
+margin: 0 auto;
+z-index: -999;
+}
+span.shoping-cart {
+border: 1px solid #0f0101;
+padding: 2px 7px 2px 6px;
+text-align: center;
+display: inline-block;
+position: relative;
+background: #fff;
+z-index: 9999999;
+color: #1abc9c;
+}
+/*
+SLIDER SECTION 
+*/
+.slider-section{ /*  СЕКЦИЯ ДЛЯ САМОЙ БОЛЬШОЙ И ПЕРВОЙ ФОТОГРАФИИ В САМОМ ВЕРХУ С ВРАЧОМ */
+display: block;
+width: 100%;
+position: relative;
+overflow: hidden;
+}
+/*.slider-section:before{
+content: "";
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+display: block;
+background: rgba(0, 0, 0, 0.52);
+z-index: 9
+}*/
+.slider-section img{
+display: block;
+width: 100%;
+height: auto;
+}
+.carousel-inner{
+position: relative;
+}
+.carousel-inner .item{}
+.carousel-inner .item:before{
+content: "";
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+display: block;
+background: rgba(0, 0, 0, 0.0); 
+z-index: 9
+}
+.carousel-inner .item img{}
+.carousel-inner .item .carousel-caption{
+top: 20%; /* БЛОК ПРИВЕТСТВИЯ */
+max-height: 350px;
+max-width: 800px;
+z-index: 999;
+background: rgba(255,255,255, 0.7)
+}
+.carousel-caption { /* ОТСТУПЫ БЛОКА С ТЕКСТОМ ПРИВЕТСТВИЯ */
+right: 10%;
+left: auto;
+padding-bottom: 30px;
+text-shadow: 0 1px 2px rgba(0, 0, 0, .0); /* ОТТЕНОК ДЛЯ ТЕКСТА В ПРИВЕТСТВИИ. ВЫВЕДЕН В НОЛЬ */
+border-radius: 5px;
+}
+.carousel-inner .item .carousel-caption h2{
+font-size: 48px;
+text-transform: uppercase;
+font-weight: 300;
+text-align: center;
+text-shadow: none;
+color: #6d8e91;
+margin: 0;
+padding: 0;
+}
+.carousel-inner .item .carousel-caption h2 b{
+color: #6d8e91;
+}
+.carousel-inner .item .carousel-caption h3{ /* ЗАГОЛОВОК БЛОКА ПРИВЕТСТВИЯ*/
+font-size: 24px;
+text-transform: uppercase;
+font-weight: 200;
+text-align: left;
+text-shadow: none;
+color: #6d8e91;
+margin: 0;
+padding: 20px 20px 20px 20px;
+}
+.carousel-inner .item .carousel-caption p{ /* ТЕКСТ БЛОКА ПРИВЕТСТВИЯ*/
+color: #6d8e91;	
+font-size: 20px;	
+text-align: left;
+padding: 20px 20px 20px 20px;
+line-height: 1.4;
+}
+.carousel-inner .item .carousel-caption h3 span{
+color: #1abc9c;
+}
+.carousel-inner .item .carousel-caption a{
+display: inline-block;
+padding: 13px 30px;
+border: 2px solid #1abc9c;
+color:#6d8e91;
+text-transform: uppercase;
+text-shadow: none;
+font-size: 14px;
+font-family: 'Montserrat', sans-serif;
+font-weight: 400;
+margin-top: 10px;
+}
+.carousel-inner .item .carousel-caption a:hover{
+background: #6d8e91;
+}
+.carousel-control{
+background-image: none !important;
+box-shadow: none !important;
+}
+.carousel-control span{
+font-size: 90px !important;
+color: #fff;
+}
+a.carousel-control.left, a.carousel-control.right{
+background:  #ed3800 !important;
+background-image: none !important;
+box-shadow: none !important;
+width: 40px;
+height: 50px;
+text-align: center;
+position: absolute;
+top: 45%;
+border: none;
+display: block;
+text-align: center;
+z-index: 999
+}
+.carousel-control {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+width: 15%;
+font-size: 20px;
+color: #fff;
+text-align: center;
+text-shadow: 0 1px 2px rgba(237, 56, 0, 1);
+filter: alpha(opacity=90);
+opacity: .9;
+}
+a.carousel-control.left > span{
+position: absolute;
+top: -20px;
+margin: 0 auto;
+left: -25px;
+}
+a.carousel-control.right > span{
+position: absolute;
+top: -20px;
+margin: 0 auto;
+left: -25px;
+}
+.carousel-control.right{
+width: 0;
+height: 0;
+background: #46bfa9;
+/* border-width: 50px 100px 50px 0;
+border-color: transparent #46bfa9 transparent transparent;*/
+}
+.carousel-control.left{
+width: 0;
+height: 0;
+background: #46bfa9;
+/*border-width: 50px 0 50px 100px;
+border-color: transparent transparent transparent #46bfa9;*/
+}
+.carousel-control span{
+font-size: 100px;
+color: #fff;
+}
+.slider-indicators{
+display: none;
+}
+/*
+SERVICE SECTION
+*/
+.service-section{
+display: block;
+text-align: center;
+padding: 50px 0 50px;
+}
+.service-item{
+} /* СЕКЦИЯ ПРИВЕТСТВИЯ */
+.service-item i{
+font-size: 70px;
+text-align: center;
+}
+.service-item h3{ /* ЗАГЛАВИЕ ПРИВЕТСТВИЯ */
+font-size: 28px;
+font-weight: 400;
+color: #628082;
+font-family: 'Montserrat', sans-serif;
+text-transform: uppercase;
+text-align: left;
+}
+.service-item p{ /* ТЕКСТ ПРИВЕТСТВИЯ */
+font-size: 18px;
+font-weight: 100;
+font-family: 'Montserrat', sans-serif;
+color:#6d8e91;
+line-height: 24px;
+text-align: left;
+}
+.service-item:hover h3, .service-item:hover i{
+color: #628082; 
+}
+/*
+NEW PRODUCR SECTION
+*/
+.new-section{ /* UNSER TEAM - СЕКЦИЯ КОМАНДЫ */
+background:#f1f4f4;
+display: block;
+padding: 50px 0 50px;
+}
+.new-section h1{
+font-size: 28px;
+font-weight: 200;
+}
+.product-item{
+position: relative;
+margin-top: 50px;
+transition: all 0.5s
+}
+.product-item img{
+width: 100%;
+height: auto;
+border-radius: 5px;
+}
+.product-hover{ /*  УПРАВЛЕНИЕ НАЛОЖЕНИЕМ НА ФОТОГРАФИЮ В UNSER TEAM  */
+position: absolute;
+display: block;
+width: 100%;
+height: calc(100% - 40px);
+background: rgba(109, 142, 145, 0.3);/* ЦВЕТ НАЛОЖЕНИЯ НА ФОТО */
+top:0;
+border: 2px solid rgba(255, 255, 255, 1);/* ЦВЕТ РАМКИ */ 
+text-align: center;
+transform: scale(0.1, 0.1);
+opacity: 0;
+transition: all 0.5s
+}
+.product-item:hover .product-hover{
+transform: scale(1, 1);
+opacity: 1;
+}
+.product-meta{/* БЛОК, В КОТОРОМ ИДЕТ ТЕКСТ, СОПРОВОЖДАЮЩИЙ ФОТО */
+display: block;
+margin-top: 35%;
+}
+.product-hover a{
+color: #fff;
+font-size: 16px;
+display: inline-block;
+border: 0px solid #fff;
+padding: 4.2%;
+margin: 5px;
+}
+.product-hover a i{
+font-size: 30px;
+}
+.product-hover a:last-child{/* ТЕКСТ ДО НАВЕДЕНИЯ КУРСОРА МЫШКИ  */
+font-size: 14px;   
+display: block;
+background:#6d8e91; 
+border: 1px solid #ffffff;
+margin: 5px 12%
+}
+.product-hover a:last-child i{
+font-size: 18px;
+margin-right: 5px;
+}
+.product-hover a:hover{/* ТЕКСТ ПОСЛЕ (!!!!!!) НАВЕДЕНИЯ КУРСОРА МЫШКИ */
+background: #628082;
+}
+.product-title{/* ЦВЕТ ПОДЛОЖКИ ДЛЯ ТЕКСТА ПОД ФОТОГРАФИЯМИ */
+display: block;
+background: #90adb1;
+width: 100%;
+bottom: 0;
+position: absolute;
+bottom: 0;
+height: 40px;
+overflow: hidden;
+transition: all 0.5s;
+border-radius: 5px;
+}
+.product-item:hover .product-title{/* ИМЯ И ФАМИЛИЯ ПРИ НАВЕДЕНИИ UNSER TEAM*/
+background:#90adb;
+}
+.product-title h3{ /* РАЗМЕР ШРИФТА НАДПИСИ ПОД ФОТОГРАФИЯМИ UNSER TEAM С ИМЕНЕМ И ФАМИЛИЕЙ  */
+margin: 0;
+padding: 0;
+text-align: center;
+color: #fff;    
+font-weight: 300;
+font-size: 14px;
+padding: 10px;
+padding-left: 15px;
+}
+.product-title span{
+display: block;
+background: rgba(255, 255, 255, 0.5);
+float: right;
+text-align: left;
+color: #fff;
+text-transform: uppercase;
+font-weight: 700;
+font-size: 18px;
+padding: 10px;
+}
+.sell-meta{
+position: absolute;
+top: 10px;
+left: 10px;
+right: 10px;
+display: block;
+width: auto;
+}
+.sell-meta a{
+width: 70px;
+display: block;
+text-transform: uppercase;
+text-align: center;
+padding:5px 10px;
+color: #555252;
+border: 1px solid #000;
+}
+.sell-meta a.new-item{
+float: left;
+}
+.sell-meta a.sell-item{
+float: right;
+}
+/*
+FEATURED SECTION
+*/
+.featured-section{ /* СЕКЦИЯ LEISTUNGEN  */
+display: block;
+padding: 50px 0 50px;
+background: #ffffff;
+}
+.featured-section h1{
+font-weight: 200;	
+font-size: 28px;	
+}
+.featured-section h4{
+color:#6d8e91;
+}
+.featured-section .container { 
+border: 0px solid #9d7a41;
+}
+.filter-menu{
+display: block;
+text-align: center;
+margin: 30px 0 50px;
+}
+.filter-menu ul{
+display: inline-block;
+margin: 0 auto;
+}
+.filter-menu ul li{
+list-style: none;
+display: inline-block;
+position: relative;
+padding: 5px 15px;
+border: 1px solid #000;
+margin: 5px;
+border-radius: 3px;
+font-size: 16px;
+font-family: 'Montserrat', sans-serif;
+font-weight: 400;
+text-transform: uppercase;
+cursor: pointer;
+}
+.filter-menu ul li.active{
+background: #1abc9c;
+border: 1px solid #1abc9c;
+color: #fff;
+}
+.filter-menu ul li span{
+position: absolute;
+width: 30px;
+height: 30px;
+background: #fff;
+color: #1abc9c;
+font-weight: 700;
+display: block;
+padding: 5px;
+border: 1px solid #000;
+border-radius: 50%;
+top: -55px;
+right: -20px;
+opacity: 0;
+transition: all 0.5s;
+}
+.filter-menu ul li.active span{
+opacity: 1;
+top: -22px;
+right: -5px
+}
+.featured .product-item{
+background: #ffffff;
+}
+/*
+BEST SELLER SECTION
+*/
+
+
+
+.best-seller-section{ /* СЕКЦИЯ UNSERE PRAXIS */
+display: block;
+padding: 50px 0 50px;
+position: relative;
+width: 100%;
+background: #f1f4f4;
+}
+.best-seller-section .product-meta{/* БЛОК, В КОТОРОМ ИДЕТ ТЕКСТ, СОПРОВОЖДАЮЩИЙ ФОТО PRAXIS */
+display: block;
+margin-top: 20%;
+}
+.best-seller-section .product-hover a{
+color: #fff;
+font-size: 16px;
+display: inline-block;
+border: 0px solid transparent;
+padding: 4.2%;
+margin: 5px;
+}
+.best-seller-section .product-hover a i{
+font-size: 30px;
+}
+.best-seller-section .product-hover a:last-child{/* ТЕКСТ ДО НАВЕДЕНИЯ КУРСОРА МЫШКИ  PRAXIS */
+font-size: 14px;
+text-transform: uppercase;
+display: block;
+background: transparent;
+border: 0px solid #ffffff;
+margin: 5px 12%
+}
+.best-seller-section .product-hover a:last-child i{
+font-size: 18px;
+margin-right: 5px;
+}
+.best-seller-section .product-hover a:hover{/* ТЕКСТ ПОСЛЕ (!!!!!!) НАВЕДЕНИЯ КУРСОРА МЫШКИ  PRAXIS*/
+background: transparent;
+}
+.best-seller-section.product-item:hover .product-title{/* ИМЯ И ФАМИЛИЯ ПРИ НАВЕДЕНИИ  PRAXIS*/
+background:#c9bcab;
+}
+.thumbnail .product-item img{
+border-radius: 5px;
+}
+.best-seller-section h1{
+font-size: 28px;	
+font-weight: 200;	
+}
+/*
+REVIEW SECTION
+*/
+.review-section{ /* СЕКЦИЯ КАРТЫ, ВРЕМЕНИ ТЕРМИНА И HVV */
+padding: 50px 0 50px;
+display: block;
+width: 100%;
+}
+
+
+.review-section h1 {
+font-size: 28px;	
+font-weight: 200;	
+}
+.review-section h5 {
+color:#6d8e91;
+}
+#map { /*  БЛОК ДЛЯ КАРТЫ */
+margin-top: 40px;
+height: 400px;
+max-width: 100%;  
+background: #ffffff; 
+border-radius: 5px;
+}
+.review-section .col-md-4{ /*  БЛОКИ ДЛЯ РАССПИСАНИЯ, ВРЕМЕНИ ПРИЕМА И HVV */
+text-align: center;
+padding-top: 50px;
+} 
+.review-section .col-md-4 img{ /* КАРТИНКА HVV ПО ЦЕНТРУ БЛОКА */
+margin: 0 auto;
+display: block;
+}  
+.review-section .col-md-4 p{
+color:#6d8e91;
+}
+/*
+CONTACT SECTION
+*/
+.contact-section{ /* СЕКЦИЯ КОНТАКТА */
+/* background: url(../images/map-bg.png) #2d3237 no-repeat;*/
+/*  background-size: 100%;   */
+background-position: center center;
+padding: 50px 0 50px;
+display: block;
+position: relative;
+}
+.contact-section h1{
+font-size: 28px;
+font-weight: 200;
+}
+.contact-section:before{
+content: "";
+width: 100%;
+height: 100%;
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+background: #f1f4f4;
+}
+.contact-section .titie-section{
+display: block;
+margin-bottom: 30px;
+}
+.contact-section .left-content{}
+.contact-section .left-content h1{
+font-size: 72px;
+margin: 0;
+padding: 0;
+color: #fff;
+line-height: 1;
+font-weight: 300;
+}
+.contact-section .left-content h1 span{
+color: #1abc9c;
+}
+.contact-section .left-content h3{
+color: #fff;
+display: block;
+font-size: 20px;
+font-weight: 400;
+font-family: 'Montserrat', sans-serif;
+margin: 0;
+padding: 0;
+margin-top: 15px;
+margin-bottom: 10px;
+}
+.contact-section .left-content p{
+color: #fff;
+font-size: 14px;
+font-weight: 300;
+line-height: 24px;
+font-family: 'Montserrat', sans-serif;
+}
+.contact-section .left-content p b{
+color: #628082;
+}
+.contact-section .left-content p{}
+.contact-info{
+display: block;
+margin-top: 10px;
+}
+.contact-info p{
+margin: 0;
+}
+.social-media{ /* КНОПКИ СОЦИАЛЬНЫХ СЕТЕЙ */
+display: block;
+margin-top: 10px;
+text-align: center; /* КНОПКИ СОЦИАЛЬНЫХ СЕТЕЙ ПО ЦЕНТРУ БЛОКА */
+}
+.social-media ul{
+margin: 0;
+padding: 0;
+display: block;
+}
+.social-media ul li{
+list-style: none;
+display: inline-block;
+margin-right: 10px;
+}
+.social-media ul li a{
+color: #fff;
+}
+.social-media ul li a i{
+height: 35px;
+width: 35px;
+font-size: 20px;
+border: 1px solid #628082 ;
+text-align: center;
+padding: 7px 0;
+background: #6d8e91;/* ЦВЕТ КНОПКИ СОЦИАЛЬНЫХ СЕТЕЙ ДО НАВЕДЕНИЯ МЫШКИ */
+border-radius: 5px;
+}
+.social-media ul li a:hover i{/* ЦВЕТ КНОПКИ СОЦИАЛЬНЫХ СЕТЕЙ ПОСЛЕ НАВЕДЕНИЯ МЫШКИ */
+background: #628082;
+border: 1px solid #6d8e91; 
+}
+.contact-form{
+margin-top: 10px;
+display: block;
+}
+.contact-form .col-md-6{
+display: block;
+margin-bottom: 30px;
+}
+.contact-form .input-group{
+width: 100%;
+display: block;
+padding-top: 50px; /* ОТСТУПЫ В КОНТАКТНОЙ ФОРМЕ */
+}
+.contact-form .input-group input.form-control, .contact-form .input-group textarea.form-control{
+width: 100%;
+display: block;
+background: #ffffff;
+border: 1px solid #c5d3d3; /* РАМКИ КОНТАКТНОЙ ФОРМЫ */
+height: 50px;
+border-radius:5px;
+}
+.contact-form .input-group textarea.form-control{
+height: 250px; /* ВЫСОТА ДЛЯ ПОЛЯ ОТСЫЛАЕМОГО СООБЩЕНИЯ В КОНТАКТНОЙ ФОРМЕ */
+}
+.contact-form .input-group .form-control:focus, .contact-form .input-group .form-control:hover{
+border: 1px solid #628082;
+box-shadow: none;
+color: #606060 !important;/* ЦВЕТ ТЕКСТА ОТСЫЛАЕМОГО СООБЩЕНИЯ В КОНТАКТНОЙ ФОРМЕ */
+font-weight: 100;
+}
+.contact-form .input-group input.contact-submit{
+display: inline-block;
+background: #6d8e91 !important;
+padding: 10px 20px;
+border: none;
+color: #fff !important; /* ЦВЕТ ТЕКСТА КНОПКИ ОТСЫЛКИ СООБЩЕНИЯ */
+border-radius:5px;
+margin-top: 0px;
+font-size: 12px;
+font-weight: 100;
+text-transform: uppercase;
+}
+.contact-form .input-group input.contact-submit:hover{ /* ЦВЕТ  КНОПКИ ОТСЫЛКИ СООБЩЕНИЯ  ПОСЛЕ НАВЕДЕНИЯ МЫШКИ*/
+display: inline-block;
+background: #628082 !important;
+padding: 10px 20px;
+border: 0px solid #628082;
+}
+/*
+FOOTER SECTION
+*/
+footer.footer{
+display: block;
+text-align: center;
+background: #6d8e91;
+padding: 20px 0;
+color: #fff;
+}
+footer.footer p{
+padding: 0;
+margin: 0;
+font-size: 14px;
+font-weight: 400;
+color: #fff;
+text-align: center;
+}
+footer.footer p a{
+color: #1abc9c
+}
+footer.footer h6, h4{ /* ЦВЕТ ШРИФТА ТЕКСТА В МОДАЛЬНОМ ОКНЕ */
+color: #628082;
+}
+/* ДОПОЛНЕНИЯ */
+.d8 h1 { /* ПОДЧЕРКИВАНИЯ КАЖДОГО ЗАГОЛОВКА В НАЧАЛЕ СЕКЦИИ */
+text-align: center;
+padding-bottom: 10px;
+}
+.d8 h1:before {
+content: "";
+position: absolute;
+bottom: -6px;
+left: 50%;
+margin-left: -5px;
+width: 10px;
+height: 10px;
+border-radius: 5px;
+background: #ed3800;
+z-index: 2;
+}
+.d8 h1:after {
+content: "";
+position: absolute;
+bottom: -2px;
+left: 50%;
+margin-left: -10%;
+width: 20%;
+height: 1px;
+background: #6d8e91;
+}		
+/*
+OFFER SECTION
+*/
+.offer-section{  /* СЕКЦИЯ FAQ */
+max-height:auto;
+max-width: auto;
+background-size: cover;
+background-position: center center;
+display: block;
+position: relative;
+text-align: center;
+color: #628082;
+}
+.mid{
+padding: 50px 0px 0px 0px; /* ЗАТЕМНЕНИЕ КАРТИНКИ КАК ФОНА В FAQ */
+width: 100%;
+height:100%;
+margin: 0 auto;
+background: rgba(255, 255, 255, 0.4);
+}
+.offer-section h1{
+font-size: 28px;
+font-weight:200;
+color:  #628082;
+display: block;
+text-align: center;
+}
+.offer-section h3{
+padding-top: 10px;
+text-transform: uppercase;
+font-size: 16px;
+color: #628082 ;
+}
+.offer-section p{
+font-size: 14px;
+text-align: left;
+}
+.offer-section .col-md-3{
+padding-top: 50px;
+padding-bottom: 50px;
+}
+.offer-section a {
+color: #4c6365; /* Цвет обычной ссылки */ 
+text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+.offer-section a:visited {
+color: #4c6365; /* Цвет посещённой ссылки */
+} 
+.offer-section a:hover {
+color: #4c6365; /* Цвет ссылки при наведении на нее курсора мыши */  
+text-decoration: underline; /* Добавляем подчеркивание */
+}
+.row-flex { /* КОЛОНКИ ОДИНАКОВОЙ ВЫСОТЫ В FAQ */
+display: flex;
+flex-wrap: wrap;
+}
+[class*="col-"] {
+margin-bottom: 0px;
+}
+.content {
+height: 100%;
+padding: 10px 20px 0px 20px;
+margin-bottom: 20px;
+}
+.colour-1 {
+background: #ffffff;
+border: 1px solid #c5d3d3;
+color:  #6d8e91; 
+border-radius: 5px;
+}
+.colour-1 img {
+max-height: 200px;
+max-width: 100%;
+margin: 0 auto;
+display: block;
+border-radius:5px;
+border: 0px solid #c5d3d3;
+}
+.image1 { /*УВЕЛИЧЕНИЕ КАРТИНКИ В FAQ  */
+overflow:hidden;
+max-height: 200px;
+max-width: 100%;
+margin: 0 auto;
+display: block;
+}
+.image1 img {
+-moz-transition: all 1s ease-out;
+-o-transition: all 1s ease-out;
+-webkit-transition: all 1s ease-out;
+}
+.image1 img:hover{
+-webkit-transform: scale(1.5);
+-moz-transform: scale(1.2);
+-o-transform: scale(1.2);
+}	
+.content h3 {
+margin-top: 0px;
+font-weight: 300;
+color:color: #628082 ;
+}
+/* КОНЕЦ СЕКЦИИ FAQ */
+/* КНОПКА НАВЕРХ */
+a.back-to-top {
+display: none;
+width: 50px;
+height: 50px;
+text-indent: -9999px;
+position: fixed;
+z-index: 999;
+right: 10px;
+bottom: 75px;
+background: #ed3800   url(../images/1up-arrow.png) no-repeat center 65%;
+border-radius: 5px;
+}
+a.back-to-top:hover {
+background:  #ba2c00   url(../images/1up-arrow.png) no-repeat center 65%;
+}
+@media (max-width: 1279px){
+a.back-to-top {
+display: none;
+width: 30px;
+height: 30px;
+text-indent: -9999px;
+position: fixed;
+z-index: 999;
+right: 5px;
+bottom: 30px;
+background: #ed3800   url(../images/2up-arrow.png) no-repeat center 53%;
+border-radius: 3px;
+}
+a.back-to-top:hover {
+background:  #ba2c00  url(../images/2up-arrow.png) no-repeat center 53%;
+}
+}
+/* КОНЕЦ КНОПКИ НАВЕРХ */
+/* НАДПИСЬ РАССПИСАНИЯ НАД САМОЙ ПЕРВОЙ ФОТОГРАФИЕЙ В STARTSEITE */
+.slider-caption { 
+position: absolute;
+max-width: 35%;
+max-height: 85%;
+z-index: 10;
+margin-top: 1%;
+margin-left: 10%;
+background:#123fff;
+}
+.slider-caption img { 
+max-height: 400px;
+max-width: 250px;
+} 
+/* КОНЕЦ НАДПИСИ РАССПИСАНИЯ НАД САМОЙ ПЕРВОЙ ФОТОГРАФИЕЙ В STARTSEITE */
+/* БЛОК В КОТОРОМ ПОМЕЩАЕТСЯ ТЕКСТ СПОЙЛЕРА */
+.well{ 
+border-radius: 0px;
+background: #ffffff;
+border: 0px solid #f5f5f5;				
+color: ;
+-webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, .05);
+box-shadow: inset 0 0px 0px rgba(0, 0, 0, .05);
+font-weight: 100;
+font-size: 16px;
+border-radius: 5px;
+}
+.well p{ 
+color: #628082;
+}
+.well ul{
+font-size: 16px !important;
+font-weight: 100 !important;
+line-height: 1.4;
+padding-left: 10px;
+color:#577174;
+}
+a.spoiler:after {
+content: url(../images/vd.png);
+color: #ffffff;
+}
+a.spoiler.collapsed:after {
+content: url(../images/1vd.png);
+color: #ffffff;
+}
+.btn-circle {
+width: 28px;
+height: 28px;
+text-align: center;
+padding: 5px 6px;
+font-size: 12px;
+line-height: 1.428571429;
+border-radius: 14px;
+background:#6d8e91;
+margin-right: 0px;
+float: right;
+color: #ffffff;
+margin-top: 10px;
+}
+.btn-circle:hover {
+background:#628082;
+}
+.featured-section .bn1{
+margin-left: 15px;
+margin-right:15px;
+border-top: 0px solid #123fff;
+margin-top: 40px;
+}
+.featured-section .bn1 .col-md-12{
+border-top: 0px solid #e7e1da;
+border-left: 0px solid #e7e1da;
+background: #f1f4f4;
+padding-top: 10px;
+margin-top: 5px;
+border-radius: 5px;
+}
+/* КОНЦ БЛОКА В КОТОРОМ ПОМЕЩАЕТСЯ ТЕКСТ СПОЙЛЕРА */
+/* ИЗМЕНЯЕМ ЦВЕТ КАРТИНКИ HVV */
+.animate6 { 
+position:relative; 
+margin:0 auto;
+width:174px; /* Ширина */
+height: 68px;  /* Высота */				
+}
+.animate6 img { 
+position:absolute; /* абсолютное позиционирование*/
+left: 0; /* выравниваем картинки по левому верхнему углу div-а*/ 
+top: 0; /* выравниваем картинки по левому верхнему углу div-а */  
+border-radius: 5px;
+}
+.animate6 img.first {
+opacity:0;
+filter:alpha(opacity=0);
+}
+.animate6:hover img.first {
+opacity:1;
+filter:alpha(opacity=100);
+}
+.animate6:hover img.second, .animate6 img.second:hover {
+opacity:0;
+filter:alpha(opacity=0);
+}
+/* ОКОНЧАНИЕ ИЗМЕНЕНИЯ ЦВЕТА КАРТИНКИ HVV */
+/* НАСТРОЙКА МОДАЛЬНЫХ ОКОН */
+.modal-backdrop{ /* ЗАТЕМНЕНИЕ МОДАЛЬНОГО ОКНА */
+position:fixed;
+top:0;
+right:0;
+bottom:0;
+left:0;
+z-index:0;
+background-color:#c5d3d3;
+}
+.modal-content{
+margin-top: 150px;
+position:relative;
+background-color:#ffffff;
+border:5px solid #6d8e91 !important;
+border-radius:0px;
+background-clip:padding-box;
+color:#000000 ;
+text-align: left;
+font-size: 14px;
+padding-left: 20px;
+border-radius: 5px;
+}
+.btn-default {
+color: #ffffff !important;
+background-color:#6d8e91; /*  В ДАННОМ СЛУЧАЕ КНОПКА SCHLIESSEN В IMPRESSUM */
+border-color: transparent;/*  В ДАННОМ СЛУЧАЕ КНОПКА SCHLIESSEN В IMPRESSUM */
+border-radius: 0px;
+border-radius: 5px;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+color: #ffffff;
+background-color: #628082 ;/*  В ДАННОМ СЛУЧАЕ КНОПКА SCHLIESSEN В IMPRESSUM */
+border-color:transparent;/*  В ДАННОМ СЛУЧАЕ КНОПКА SCHLIESSEN В IMPRESSUM */
+} 
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+color: #ffffff;
+background-color: #6d8e91;
+border-color: transparent;
+}
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default.focus {
+color: #333;
+background-color: #6d8e91;
+border-color: transparent;
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+background-image: none;
+}
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus {
+background-color: #fff;
+border-color: transparent;
+}
+.btn-default .badge {
+color: #fff;
+background-color: #333;
+}
+.btn-primary {
+color: #fff;
+background-color: transparent;
+border-color:transparent;
+padding-left: 1px; /* ОТСТУПЫ ОТ ТЕКСТА В КНОПКЕ IMPRESSUM */
+padding-right: 1px;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+color: #fff;
+background-color:  transparent;
+border-color:  transparent;
+}
+.btn-primary:hover {
+color: #ed3800 ; /* ЗАТЕМНЕНИЕ СЛОВА IMPRESSUM НА КНОПКЕ IMPRESSUM */
+background-color:  transparent;
+border-color:  transparent;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+color: #fff;
+background-color:  transparent;
+border-color:  transparent;
+}
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+color: #fff;
+background-color:  transparent;
+border-color:  transparent;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+background-image: none;
+}
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus {
+background-color:  transparent;
+border-color:  transparent;
+}
+.btn-primary .badge {
+color: #337ab7;
+background-color: #fff;
+}
+/* КОНЕЦ НАСТРОЙКИ МОДАЛЬНЫХ ОКОН*/
+/* КОНЕЦ ДОПОЛНЕНИЯ */
+/*
+RESPONSIVE STYLE
+*/
+@media (max-width: 1200px){
+.product-hover a {
+padding: 2%;
+}
+.product-hover a:last-child {
+margin: 5px 25%;
+padding: 10px;
+}
+}
+@media (max-width: 992px){
+ul.navbar-nav li a{
+font-size: 12px;
+}
+.blog-item h3{
+font-size: 15px;
+}
+.blog-item p{
+font-size: 12px;
+}
+.blog-item a:last-child{
+font-size: 14px;
+}
+.contact-form .col-md-6 {
+display: block;
+margin-bottom: 10px;
+overflow: hidden;
+}
+a.carousel-control.left, a.carousel-control.right{
+width: 0px;/* КНОПКИ ПЕРЕБОРА СЛАЙДЕРА */
+height: 0px;
+display: none;
+}
+.carousel-inner .item .carousel-caption h2, .carousel-inner .item .carousel-caption h3{
+font-size:0px;
+}
+.carousel-inner .item .carousel-caption a{
+font-size: 0px
+}
+}
+@media (max-width: 767px){
+a.carousel-control.left, a.carousel-control.right{
+width: 0px;/* КНОПКИ ПЕРЕБОРА СЛАЙДЕРА */
+height: 0px;
+display: none;
+}
+ul.navbar-nav {
+width: 100%;
+display: block;
+text-align: center;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+overflow: hidden;
+}
+ul.navbar-nav.cart-menu li a{
+padding: 15px 0;
+}
+.header-top-menu ul, .header-top-content ul{
+display: inline-block;
+}
+.header-top-menu, .header-top-content {
+text-align: center;
+}
+.titie-section h1{
+font-size: 26px;
+}
+.contact-form {
+margin-top: 30px;
+display: block;
+}
+.blog-item {
+margin-bottom: 30px;
+}
+}
+@media (max-width: 620px){
+.header-top-content ul li a{
+font-size: 12px;
+}
+.header-top-menu ul li a{
+font-size: 12px;
+}
+a.carousel-control.left, a.carousel-control.right{
+width: 0px;/* КНОПКИ ПЕРЕБОРА СЛАЙДЕРА */
+height: 0px;
+display: none;
+}
+a.carousel-control.right > span { /* КНОПКИ ПЕРЕБОРА СЛАЙДЕРА */
+top: 0px;
+left: 0px;
+}
+a.carousel-control.left > span {
+top: 0px;
+left: 0px;
+}
+.carousel-inner .item .carousel-caption h2, .carousel-inner .item .carousel-caption h3{
+font-size:0px;
+}
+.carousel-inner .item .carousel-caption a{
+padding: 2px 10px;
+font-size: 0px
+}
+.product-hover a:last-child {
+margin: 5px 25%;
+padding: 10px;
+font-size: 12px;
+}
+.filter-menu ul li{
+display: block;
+}
+.carousel-inner .item .carousel-caption {
+top: 7%;
+z-index: 999;
+}
+}
+/* ДОПОЛНЕНИЯ MOBIL */
+@media (max-width: 415px){ /* ИЗМЕНЕНИЕ РАЗМЕРА ПОДЧЕРКИВАНИЯ */
+.d8 h1:after {
+content: "";
+position: absolute;
+bottom: -2px;
+left: 35%;
+margin-left: -10%;
+width: 50%;
+height: 1px;
+background: #6d8e91;
+}		
+}
+@media (max-width: 1023px){ 
+.navbar-header img{ /*УПРАВЛЕНИЕ ЛОГОТИПОМ  */
+border: 0px solid red;
+padding-top: 0px;
+margin-left: 10px;
+}	
+}	
+/*УПРАВЛЕНИЕ ЛОГОТИПОМ  */
+@media screen and (min-width:768px) and (max-width:1023px) {
+.navbar-header img{ 
+margin-left: 62px;
+max-height: 45px;
+max-width: 177px;
+}	
+}
+@media (max-width: 951px){ 
+.service-item h3{ /* ЗАГЛАВИЕ ПРИВЕТСТВИЯ */
+font-size: 18px;
+}
+.service-item p{ /* ТЕКСТ ПРИВЕТСТВИЯ */
+font-size: 12px;
+}
+.service-section, .new-section, .featured-section,/* ОТСТУПЫ БЛОКОВ ТЕКСТА ПРИВЕТСТВИЯ, TEAM, LEISTUNGEN,PRAXIS,MAP_KONTAKT */
+.best-seller-section, .review-section,
+.contact-section, .offer-section { 
+padding: 50px 0 50px;
+}	
+.offer-section .mid{ /* ОТСТУПЫ СВЕРХУ И СНИЗУ ЗАСВЕТЛЕНИЯ ФОТО В FAQ */
+margin-top: -50px;
+margin-bottom: -50px;
+}
+.service-section .titie-section h1,/* НАЗВАНИЯ БЛОКОВ, TEAM, LEISTUNGEN,PRAXIS,MAP,KONTAKT */
+.new-section .titie-section h1, 
+.featured-section .titie-section h1,
+.best-seller-section .titie-section h1,
+.review-section .titie-section h1,
+.contact-section .titie-section h1,
+.offer-section .titie-section h1{ 
+font-size: 18px;
+}	
+.featured-section .bn1 h4{ /* СЕКЦИЯ СПОЙЛЕРА */
+font-size: 14px;	
+}
+.well ul{
+font-size: 12px !important;/* СЕКЦИЯ СПОЙЛЕРА */
+}
+.well p{
+font-size: 12px !important;/* СЕКЦИЯ СПОЙЛЕРА */
+}
+.offer-section p{
+font-size: 12px !important;	/* СЕКЦИЯ СПОЙЛЕРА */
+}
+.offer-section h3{/* СЕКЦИЯ СПОЙЛЕРА */
+font-size: 14px;		
+}
+}
+@media screen and (min-width:1023px) and (max-width:1113px) {/* УПРАВЛЕНИЕ РАЗМЕРОМ ТЕКСТА ПОД ФОТО В TEAM */
+.new-section .product-item:hover a{
+font-size: 9px !important;  
+}
+.new-section .product-title h3, /* УПРАВЛЕНИЕ РАЗМЕРОМ ТЕКСТА ПОД ФОТО В TEAM */
+.best-seller-section .product-title h3{
+font-size: 12px;
+} 
+}
+@media screen and (min-width:320px) and (max-width:481px) {/* УПРАВЛЕНИЕ РАЗМЕРОМ ТЕКСТА ПОД ФОТО В TEAM */
+.new-section .product-item:hover a{
+font-size: 10px !important;  
+}
+.new-section .product-meta{/* БЛОК, В КОТОРОМ ИДЕТ ТЕКСТ, СОПРОВОЖДАЮЩИЙ ФОТО */
+display: block;
+margin-top: 20%;
+}
+.new-section .product-hover a{
+color: #fff;
+font-size: 16px;
+display: inline-block;
+border: 1px solid #fff;
+padding: 5px 5px 5px 5px;
+margin: 5px 12%;
+}
+}
+@media (max-width: 241px){
+.new-section .product-item:hover a{
+font-size: 6px !important;  
+}	
+.new-section .product-hover a{
+padding: 1px 1px 1px 1px;
+margin: 2px 2px;
+}	
+.new-section .product-meta{/* БЛОК, В КОТОРОМ ИДЕТ ТЕКСТ, СОПРОВОЖДАЮЩИЙ ФОТО */
+margin-top: 1%;
+}
+}  
+@media screen and (min-width:240px) and (max-width:639px){
+.new-section .product-title h3{ /* УПРАВЛЕНИЕ РАЗМЕРОМ ТЕКСТА ПОД ФОТО В TEAM */
+font-size: 10px;
+} 	
+}
+@media (max-width: 951px){ /*УПРАВЛЕНИЕ КАРТИНКОЙ РАССПИСАНИЯ НАД САМОЙ ПЕРВОЙ ФОТОГРАФИЕЙ  */
+.slider-caption img { 
+max-height: 350px;
+max-width: 220px;
+} 
+.slider-caption { 
+margin-top: 0px;
+max-width: 25%;
+max-height: 75%;
+}
+}
+@media screen and (min-width:952px) and (max-width:1441px) {
+.slider-caption img { 
+max-height: 350px;
+max-width: 220px;
+} 
+.slider-caption { 
+margin-top: 0.5%;
+}	
+}
+@media screen and (min-width:1442px) and (max-width:1600px) {
+.slider-caption img { 
+max-height: 550px;
+max-width: 320px;
+} 
+.slider-caption { 
+margin-top: 1%;
+}	
+}
+@media (max-width: 639px) { /* ТАБЛИЦА HVV */
+.review-section .table{
+font-size: 10px;
+}
+}
+@media screen and (min-width:479px) and (max-width:741px) {/* ТАБЛИЦА HVV */
+.review-section .table th { 
+padding: 0px 0px 0px 40px;
+}	
+}
+@media (max-width: 361px) {/* ТАБЛИЦА HVV */
+.review-section .table th { 
+padding: 0px 0px 0px 20px;
+}		
+}
+@media screen and (min-width:768px) and (max-width:1113px) {/* ТАБЛИЦА HVV */
+.review-section .table{
+font-size: 10px;	
+}
+}
+@media (max-width: 361px) {
+.form-control {
+font-size: 6px !important;
+}		
+.contact-form .input-group{
+padding-top: 10px; /* ОТСТУПЫ В КОНТАКТНОЙ ФОРМЕ */
+}	
+}
+@media screen and (min-width:410px) and (max-width:481px) {
+.form-control {
+font-size: 10px !important;
+}	
+.contact-form .input-group{
+padding-top: 20px; /* ОТСТУПЫ В КОНТАКТНОЙ ФОРМЕ */
+}	
+}
+@media (max-width: 765px) {
+.contact-form .input-group textarea.form-control{
+height: 180px; /* ВЫСОТА ДЛЯ ПОЛЯ ОТСЫЛАЕМОГО СООБЩЕНИЯ В КОНТАКТНОЙ ФОРМЕ */
+}
+}
+@media screen and (min-width:483px) and (max-width:765px) {
+.contact-form .input-group{
+padding-top: 20px; /* ОТСТУПЫ В КОНТАКТНОЙ ФОРМЕ */	
+}
+}
+@media (max-width: 361px) {
+.best-seller-section .product-hover{ /*  УПРАВЛЕНИЕ НАЛОЖЕНИЕМ НА ФОТОГРАФИЮ В PRAXIS */
+height: calc(100% - 41px);	
+}
+.best-seller-section h3{
+font-size: 10px;
+}
+.best-seller-section .product-meta{/* БЛОК, В КОТОРОМ ИДЕТ ТЕКСТ, СОПРОВОЖДАЮЩИЙ ФОТО PRAXIS */
+display: block;
+margin-top: 4%;
+}
+}
+@media screen and (min-width:362px) and (max-width:481px) {
+.best-seller-section .product-meta{/* БЛОК, В КОТОРОМ ИДЕТ ТЕКСТ, СОПРОВОЖДАЮЩИЙ ФОТО PRAXIS */
+display: block;
+margin-top: 15%;
+}
+.best-seller-section h3{
+font-size: 10px;
+}	
+}
