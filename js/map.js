@@ -2,31 +2,59 @@
         // Styles a map in night mode.
         var map = new google.maps.Map(document.getElementById('map'), {
           center:  {lat: 53.5573, lng: 9.97165},
-          zoom: 18,
+          zoom: 15,
           
 		  
 		  styles: [
     {
-        "featureType": "administrative",
-        "elementType": "labels.text.fill",
+        "featureType": "road",
+        "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#444444"
+                "color": "#7b9a9c"
             }
         ]
     },
     {
-        "featureType": "landscape",
-        "elementType": "all",
+        "featureType": "road",
+        "elementType": "geometry.stroke",
         "stylers": [
             {
-                "color": ""
+                "visibility": "on"
             }
         ]
     },
     {
         "featureType": "poi",
-        "elementType": "all",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#a8bbbd"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#a7bbbd"
+            }
+        ]
+    },
+    {
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "weight": 0.3
+            }
+        ]
+    },
+    {
+        "elementType": "labels.icon",
         "stylers": [
             {
                 "visibility": "off"
@@ -34,58 +62,24 @@
         ]
     },
     {
-        "featureType": "road",
-        "elementType": "all",
+        "featureType": "water",
+        "elementType": "geometry",
         "stylers": [
             {
-                "saturation": -100
-            },
-            {
-                "lightness": 45
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "on"
+                "color": "#e0e0e0"
             }
         ]
     },
     {
         "featureType": "transit",
-        "elementType": "all",
+        "elementType": "geometry",
         "stylers": [
             {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#e0e0e0"
-            },
-            {
-                "visibility": "on"
+                "color": "#8aa5a7"
             }
         ]
     }
 ]
-
 	   });
      
  	// Создаем маркер на карте
